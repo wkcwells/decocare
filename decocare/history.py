@@ -772,6 +772,7 @@ class PagedData (object):
 
   def __init__ (self, raw, model):
     self.model = model
+    assert len(raw) == 1024, "Incorrect pump history block size: " + str(len(raw))
     data, crc = raw[0:1022], raw[1022:]
     computed = lib.CRC16CCITT.compute(bytearray(data))
     if lib.BangInt(crc) != computed:
