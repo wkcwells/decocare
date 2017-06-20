@@ -7,6 +7,8 @@ import lib
 import models
 from errors import StickError, AckError, BadDeviceCommError
 
+# KW: With mmeowlink - I don't think that we are using this class at all except as a dict or something?
+# But mmeowlink subclasses it
 
 class Session(object):
   def __init__(self, stick):

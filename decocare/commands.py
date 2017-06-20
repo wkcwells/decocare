@@ -1,6 +1,7 @@
 
 import logging
 import time
+import sys
 
 import lib
 
@@ -22,6 +23,7 @@ correct arguments.)
 
 """
 
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 log = logging.getLogger( ).getChild(__name__)
 
 def CRC8(data):
